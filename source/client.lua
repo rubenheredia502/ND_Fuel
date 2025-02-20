@@ -1,3 +1,4 @@
+local QBCore = exports['qb-core']:GetCoreObject()
 local FUEL_DECOR = "_ANDY_FUEL_DECORE_"
 local nozzleDropped = false
 local holdingNozzle = false
@@ -237,9 +238,9 @@ local function vehicleIsFueling()
         end
         
         local newCost = ((2.0 / classMultiplier) * config.fuelCostMultiplier) - math.random(0, 100) / 100
-        local player = exports["ND_Core"]:getPlayer()
+        local PlayerData = QBCore.Functions.GetPlayerData()
         
-        if (player and player.bank or 0) < cost then
+        if (PlayerData.money.bank or 0) < cost then
             SendNUIMessage({
                 type = "warn"
             })
@@ -304,8 +305,8 @@ CreateThread(function()
                     fuelTank = "0.0"
                 })
 
-                local player = exports["ND_Core"]:getPlayer()
-                if (player and player.bank or 0) < cost then
+                local PlayerData = QBCore.Functions.GetPlayerData()
+                if (PlayerData.money.bank or 0) < cost then
                     SendNUIMessage({
                         type = "warn"
                     })
