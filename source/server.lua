@@ -1,13 +1,10 @@
-local NDCore = exports["ND_Core"]
+local QBCore = exports["qb-core"]:GetCoreObject()
 
 RegisterNetEvent("ND_Fuel:pay", function(amount)
     local src = source
-    local player = NDCore:getPlayer(src)
-    if not player then return end
+    local Player = QBCore.Functions.GetPlayer(src)
+    if not Player then return end
 
-    player.deductMoney("bank", math.floor(amount), "Gas Station")
-    player.notify({
-        title = ("Paid: $%.2f for gas."):format(amount),
-        type = "inform"
-    })
+    Player.Functions.RemoveMoney("bank", math.floor(amount), "Gas Station")
+    TriggerClientEvent("QBCore:Notify", src, ("Paid: $%.2f for gas."):format(amount), "inform")
 end)
