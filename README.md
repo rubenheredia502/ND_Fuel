@@ -1,5 +1,5 @@
 
-Thanks to [ND-Framework](https://github.com/ND-Framework) for creating the [ND_Fuel](https://github.com/ND-Framework/ND_Fuel) resource and bringing so much value to the community 😊
+Thanks to [ND-Framework](https://github.com/ND-Framework) ([Andyyy7666])(https://github.com/Andyyy7666) for creating the [ND_Fuel](https://github.com/ND-Framework/ND_Fuel) resource and bringing so much value to the community 😊
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/86536434/193705940-4a974196-6135-4950-b068-9f4de8e9d2f5.png" />
